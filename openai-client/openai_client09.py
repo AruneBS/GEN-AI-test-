@@ -20,7 +20,7 @@ response = client.chat.completions.create(
         },
         {
             "role": "user",
-            "content": "What is the capital of France?",
+            "content": "What temperature tomorrow in Vilnius?",
         }
     ],
     model="gpt-4o",
