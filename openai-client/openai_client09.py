@@ -12,7 +12,8 @@ client = OpenAI(
     api_key=os.environ["GITHUB_TOKEN"],
 )
 
-response = client.chat.completions.create(
+#response = client.chat.completions.create(
+chat_completion= client.chat.completions.create(
     messages=[
         {
             "role": "system",
@@ -20,13 +21,13 @@ response = client.chat.completions.create(
         },
         {
             "role": "user",
-            "content": "What temperature tomorrow in Vilnius?",
+            "content": "Generate me a python code to read a file",
         }
     ],
     model="gpt-4o",
-    temperature=1,
-    max_tokens=4096,
-    top_p=1
+    #temperature=1,
+    #max_tokens=4096,
+    #top_p=1
 )
 
-print(response.choices[0].message.content)
+print(chat_completion)
